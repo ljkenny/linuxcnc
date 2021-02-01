@@ -1,0 +1,7 @@
+*.bak
+*.orig
+*~
+\#*#
+
+# Also maintain the .gitignore file
+!.gitignore
