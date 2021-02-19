@@ -7,7 +7,7 @@
     <child>
       <object class="GtkTable" id="table1">
         <property name="visible">True</property>
-        <property name="n_rows">2</property>
+        <property name="n_rows">3</property>
         <child>
           <object class="HAL_Meter" id="hal_meter1">
             <property name="width_request">200</property>
@@ -24,43 +24,172 @@
             <property name="bg_color">#ffffffffffff</property>
           </object>
         </child>
+
         <child>
           <object class="GtkHBox" id="hbox1">
             <property name="visible">True</property>
-            <child>
-              <object class="HAL_LED" id="hal_led1">
-                <property name="visible">True</property>
-              </object>
-              <packing>
+	    <child>
+	      <object class="GtkLabel" id="label1">
+		<property name="visible">True</property>
+		<property name="label" translatable="yes">Probe        </property>
+		<attributes>
+		  <attribute name="weight" value="bold"/>
+		</attributes>
+	      </object>
+	      <packing>
                 <property name="fill">False</property>
                 <property name="position">0</property>
+	      </packing>
+	    </child>
+	    <child>
+	      <object class="HAL_LED" id="probe_led">
+                <property name="visible">True</property>
+	      </object>
+	      <packing>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+	      </packing>
+	    </child>
+          </object>
+	  <packing>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+	  </packing>
+        </child>
+
+        <child>
+          <object class="GtkHBox" id="hbox2">
+            <property name="visible">True</property>
+	    <child>
+	      <object class="GtkLabel" id="label2">
+		<property name="visible">True</property>
+		<property name="label" translatable="yes">X/Z Sensor</property>
+		<attributes>
+		  <attribute name="weight" value="bold"/>
+		</attributes>
+	      </object>
+	      <packing>
+		<property name="fill">True</property>
+		<property name="position">0</property>
+	      </packing>
+	    </child>
+            <child>
+              <object class="HAL_LED" id="xz_sensor_led">
+		<property name="visible">True</property>
+              </object>
+              <packing>
+		<property name="fill">True</property>
+		<property name="position">1</property>
+              </packing>
+            </child>
+	  </object>
+	  <packing>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+	  </packing>
+	</child>
+      
+        <child>
+          <object class="GtkHBox" id="hbox3">
+            <property name="visible">True</property>
+	    <child>
+	      <object class="GtkLabel" id="label3">
+		<property name="visible">True</property>
+		<property name="label" translatable="yes">Y1 Sensor </property>
+		<attributes>
+		  <attribute name="weight" value="bold"/>
+		</attributes>
+	      </object>
+	      <packing>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+	      </packing>
+	    </child>
+	    <child>
+	      <object class="HAL_LED" id="y1_sensor_led">
+                <property name="visible">True</property>
+	      </object>
+	      <packing>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+	      </packing>
+	    </child>
+          </object>
+	  <packing>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+	  </packing>
+        </child>
+
+        <child>
+          <object class="GtkHBox" id="hbox4">
+            <property name="visible">True</property>
+	    <child>
+	      <object class="GtkLabel" id="label4">
+		<property name="visible">True</property>
+		<property name="label" translatable="yes">Y2 Sensor </property>
+		<attributes>
+		  <attribute name="weight" value="bold"/>
+		</attributes>
+	      </object>
+	      <packing>
+		<property name="fill">False</property>
+		<property name="position">0</property>
+	      </packing>
+	    </child>
+            <child>
+              <object class="HAL_LED" id="y2_sensor_led">
+		<property name="visible">True</property>
+              </object>
+              <packing>
+		<property name="fill">False</property>
+		<property name="position">1</property>
+              </packing>
+            </child>
+	  </object>
+	  <packing>
+            <property name="top_attach">4</property>
+            <property name="bottom_attach">5</property>
+	  </packing>
+	</child>
+      
+	<child>
+	  <object class="GtkHBox" id="hbox5">
+            <property name="visible">True</property>
+            <child>
+              <object class="HAL_LED" id="hal_led1">
+		<property name="visible">True</property>
+              </object>
+              <packing>
+		<property name="fill">False</property>
+		<property name="position">0</property>
               </packing>
             </child>
             <child>
               <object class="HAL_LED" id="hal_led3">
-                <property name="visible">True</property>
-                <property name="pick_color_off">#f6e0ebe201e9</property>
+		<property name="visible">True</property>
+		<property name="pick_color_off">#f6e0ebe201e9</property>
               </object>
               <packing>
-                <property name="fill">False</property>
-                <property name="position">1</property>
+		<property name="fill">False</property>
+		<property name="position">1</property>
               </packing>
             </child>
             <child>
               <object class="HAL_LED" id="hal_led2">
-                <property name="visible">True</property>
+		<property name="visible">True</property>
               </object>
               <packing>
-                <property name="fill">False</property>
-                <property name="position">2</property>
+		<property name="fill">False</property>
+		<property name="position">2</property>
               </packing>
             </child>
-          </object>
-          <packing>
-            <property name="top_attach">1</property>
-            <property name="bottom_attach">2</property>
-          </packing>
-        </child>
+	  </object>
+	  <packing>
+            <property name="top_attach">5</property>
+            <property name="bottom_attach">6</property>
+	  </packing>
+	</child>
       </object>
     </child>
   </object>

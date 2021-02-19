@@ -43,6 +43,8 @@ net home-x-z            <= parport.0.pin-10-in
 net home-y1             <= parport.0.pin-11-in
 net home-y2             <= parport.0.pin-12-in
 
+net probe  motion.probe-input <= parport.0.pin-13-in-not
+
 setp stepgen.0.position-scale [JOINT_0]SCALE
 setp stepgen.0.steplen 1
 setp stepgen.0.stepspace 0
@@ -98,8 +100,8 @@ net home-x-z => joint.3.home-sw-in
 net estop-out <= iocontrol.0.user-enable-out
 net estop-out => iocontrol.0.emc-enable-in
 
-loadusr -W hal_manualtoolchange
-net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
-net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
-net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
-net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
+#loadusr -W hal_manualtoolchange
+#net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
+#net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
+#net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
+#net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
